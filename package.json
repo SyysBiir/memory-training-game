@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "http://memory-training.github.io/expo-gh-pages", 
+  "homepage": "/web-build", 
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
