@@ -1,22 +1,22 @@
 {
   "files": {
-    "app.js": "/expo-gh-pages/static/js/app.0addf3ff.chunk.js",
-    "app.js.map": "/expo-gh-pages/static/js/app.0addf3ff.chunk.js.map",
-    "runtime~app.js": "/expo-gh-pages/static/js/runtime~app.57d3d678.js",
-    "runtime~app.js.map": "/expo-gh-pages/static/js/runtime~app.57d3d678.js.map",
-    "static/js/2.9eabe91d.chunk.js": "/expo-gh-pages/static/js/2.9eabe91d.chunk.js",
-    "static/js/2.9eabe91d.chunk.js.map": "/expo-gh-pages/static/js/2.9eabe91d.chunk.js.map",
-    "favicon-16.png": "/expo-gh-pages/favicon-16.png",
-    "favicon-32.png": "/expo-gh-pages/favicon-32.png",
-    "favicon.ico": "/expo-gh-pages/favicon.ico",
-    "index.html": "/expo-gh-pages/index.html",
-    "manifest.json": "/expo-gh-pages/manifest.json",
-    "serve.json": "/expo-gh-pages/serve.json",
-    "static/js/2.9eabe91d.chunk.js.LICENSE.txt": "/expo-gh-pages/static/js/2.9eabe91d.chunk.js.LICENSE.txt"
+    "app.js": "/memory-training-game/static/js/app.0addf3ff.chunk.js",
+    "app.js.map": "/memory-training-game/static/js/app.0addf3ff.chunk.js.map",
+    "runtime~app.js": "/memory-training-game/static/js/runtime~app.c7b71e5c.js",
+    "runtime~app.js.map": "/memory-training-game/static/js/runtime~app.c7b71e5c.js.map",
+    "static/js/2.561f2e4a.chunk.js": "/memory-training-game/static/js/2.561f2e4a.chunk.js",
+    "static/js/2.561f2e4a.chunk.js.map": "/memory-training-game/static/js/2.561f2e4a.chunk.js.map",
+    "favicon-16.png": "/memory-training-game/favicon-16.png",
+    "favicon-32.png": "/memory-training-game/favicon-32.png",
+    "favicon.ico": "/memory-training-game/favicon.ico",
+    "index.html": "/memory-training-game/index.html",
+    "manifest.json": "/memory-training-game/manifest.json",
+    "serve.json": "/memory-training-game/serve.json",
+    "static/js/2.561f2e4a.chunk.js.LICENSE.txt": "/memory-training-game/static/js/2.561f2e4a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime~app.57d3d678.js",
-    "static/js/2.9eabe91d.chunk.js",
+    "static/js/runtime~app.c7b71e5c.js",
+    "static/js/2.561f2e4a.chunk.js",
     "static/js/app.0addf3ff.chunk.js"
   ]
 }
