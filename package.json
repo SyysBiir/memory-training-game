@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "https://syysbiir.github.io/memory-training-game", 
+  "homepage": "https://syysbiir.github.io/memory-training-game/web-build", 
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
