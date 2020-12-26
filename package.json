@@ -7,7 +7,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "deploy": "npx gh-pages -b master -d web-build",
+    "deploy": "npx gh-pages -b master -d web-build", 
     "predeploy": "expo build:web"
   },
   "dependencies": {
