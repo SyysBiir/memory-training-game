@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/memory-training-game/web-build/static/js/app.0addf3ff.chunk.js",
-    "app.js.map": "/memory-training-game/web-build/static/js/app.0addf3ff.chunk.js.map",
+    "app.js": "/memory-training-game/web-build/static/js/app.722fb698.chunk.js",
+    "app.js.map": "/memory-training-game/web-build/static/js/app.722fb698.chunk.js.map",
     "runtime~app.js": "/memory-training-game/web-build/static/js/runtime~app.b4d090f1.js",
     "runtime~app.js.map": "/memory-training-game/web-build/static/js/runtime~app.b4d090f1.js.map",
     "static/js/2.545fa443.chunk.js": "/memory-training-game/web-build/static/js/2.545fa443.chunk.js",
@@ -17,6 +17,6 @@
   "entrypoints": [
     "static/js/runtime~app.b4d090f1.js",
     "static/js/2.545fa443.chunk.js",
-    "static/js/app.0addf3ff.chunk.js"
+    "static/js/app.722fb698.chunk.js"
   ]
 }

@@ -90,6 +90,10 @@ export default class App extends Component {
   }
 
   componentDidMount() {
+    this.init()
+  }
+
+  init = () => {
     for (let i = 0; i < (this.state.levels + 1); i++) {
       let line = [], line_sum = [], step = 0, numbers = [], answers = [], result = [];
       for (let i = 0; i < this.state.numbers_count; i++) {
@@ -176,6 +180,30 @@ export default class App extends Component {
                  return (<Text style={[styles.numberResult,{color: !l2.correct ? '#e74c3c' : '#2ecc71'}]} key={i2}>{l2.value}</Text>)
                 })
               }</View>)
+    })
+  }
+
+  repeat = () => {
+    this.setState({
+      page: 'start',
+      timer: 0, //Значение прогресса
+      time_1: 2, //Время запоминания
+      time_2: 15, //Время выполнения
+      numbers: [], //Номера с ответами
+      answers: [], //Решения, изначально пустые
+      task: 0,
+      levels: 9, //количество уровней
+      variants_count: 12, //количество вариантов ответа
+      numbers_count: 5, //количество цифр  в одном ряде
+      min_random: 1, //минимальное значение сгенерируемого числа
+      max_random: 7, //максимальное значение сгенерируемого числа
+      variants: [], //Варианты ответов
+      seconds: 0,
+      currentAnswer: 0, //Текущий сфокусированный инпут ответа
+      result: [],
+      correct_count: 0 //Количество правильных ответов
+    }, ()=>{
+      this.init()
     })
   }
 
@@ -335,7 +363,7 @@ export default class App extends Component {
                   <TouchableHighlight
                     underlayColor="#5cd28e"
                     style={styles.button}
-                    onPress={() => this.taskStart()}
+                    onPress={() => this.repeat()}
                   >
                     <Text style={styles.buttonText}>Начать заново</Text>
                   </TouchableHighlight>
@@ -362,7 +390,7 @@ export default class App extends Component {
           disabled={false}
           thumbTintColor="transparent"
           minimumTrackTintColor="#e74c3c"
-          maximumTrackTintColor="#2ecc71"
+          maximumTrackTintColor="transparent"
       />
     }
   }
