@@ -16,18 +16,6 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "android": {
-      "supportsTablet": true,
-      "config": {
-        "googleMobileAdsAppId": "ca-app-pub-4664477818316111~5149534141"
-      }
-    },
-    "ios": {
-      "supportsTablet": true,
-      "config": {
-        "googleMobileAdsAppId": "ca-app-pub-4664477818316111~9540205296"
-      }
-    },
     "web": {
       "favicon": "./assets/favicon.png"
     }
