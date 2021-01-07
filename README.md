@@ -1,4 +1,4 @@
 # memory-training-game
-> Игра для тренировки рабочей памяти
+> A game to train your working memory
 
 https://syysbiir.github.io/memory-training-game/
