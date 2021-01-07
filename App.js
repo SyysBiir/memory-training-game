@@ -311,26 +311,21 @@ export default class App extends Component {
     switch (this.state.page) {
       case "start":
         return (<Fragment>
-                  <Text style={styles.title}>Тренировка памяти</Text>
-                  <Text style={styles.desc}>Вам будут приведены {this.state.numbers_count} чисел. Ваша задача –
-                    постараться их запомнить в течение {this.state.time_1} секунд, затем в уме сложить первое со вторым, а
-                    полученную сумму записать; второе число сложить с третьим, сумму
-                    записать; и так далее. Таким образом, у вас должно
-                    быть получено и записано {this.state.numbers_count - 1} суммы. Время вычисления и
-                    выполнения {this.state.time_2} секунд. После чего приступаете к следующему ряду чисел</Text>
+                  <Text style={styles.title}>Memory training</Text>
+                  <Text style={styles.desc}>You will be given {this.state.numbers_count} numbers. Your task is to try to remember them in {this.state.time_1} seconds, then add the first with the second in your mind, and write down the resulting amount; add the second number with the third, write down the amount; etc. Thus, {this.state.numbers_count - 1} amounts should be received and recorded from you. The calculation and execution time is {this.state.time_2} seconds. Then proceed to the next row of numbers</Text>
                   <TouchableHighlight
                     underlayColor="#5cd28e"
                     style={styles.button}
                     onPress={() => this.taskStart()}
                   >
-                    <Text style={styles.buttonText}>Начать</Text>
+                    <Text style={styles.buttonText}>Start</Text>
                   </TouchableHighlight>
                 </Fragment>)
       
       case "task":
         return (<Fragment>
                   <Text style={styles.titleLevels}>{this.state.task + 1}/{this.state.levels + 1}</Text>
-                  <Text style={styles.title}>Запомните числа</Text>
+                  <Text style={styles.title}>Memorize the numbers</Text>
                   <View style={styles.numbersBoxTask}>
                     {this.numbersLine()}
                   </View>
@@ -339,7 +334,7 @@ export default class App extends Component {
       case "task_sum":
         return (<Fragment>
                   <Text style={styles.titleLevels}>{this.state.task + 1}/{this.state.levels + 1}</Text>
-                  <Text style={styles.title}>Укажите ответы</Text>
+                  <Text style={styles.title}>Enter answers</Text>
                   <View style={styles.numbersBox}>
                     {this.answers()}
                   </View>
@@ -351,21 +346,21 @@ export default class App extends Component {
                     style={styles.buttonNext}
                     onPress={() => this.taskStart(1)}
                   >
-                    <Text style={styles.buttonText}>Далее</Text>
+                    <Text style={styles.buttonText}>Next</Text>
                   </TouchableHighlight>
                 </Fragment>)
 
       case "finish":
         return (<Fragment>
-                  <Text style={styles.title}>Результат</Text>
-                  <Text style={styles.descEnd}>Количество правильных ответов - {this.state.correct_count}. Норма взрослого человека – от {((this.state.numbers_count-1)*10)*0.75} и выше</Text>
+                  <Text style={styles.title}>Result</Text>
+                  <Text style={styles.descEnd}>The number of correct answers - {this.state.correct_count}. The norm of an adult is from {((this.state.numbers_count-1)*10)*0.75} and above</Text>
                   {this.result()}
                   <TouchableHighlight
                     underlayColor="#5cd28e"
                     style={styles.button}
                     onPress={() => this.repeat()}
                   >
-                    <Text style={styles.buttonText}>Начать заново</Text>
+                    <Text style={styles.buttonText}>Repeat</Text>
                   </TouchableHighlight>
                 </Fragment>)
     
