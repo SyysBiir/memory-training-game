@@ -1,22 +1,22 @@
 {
   "files": {
-    "app.js": "/memory-training-game/web-build/static/js/app.6647fc0a.chunk.js",
-    "app.js.map": "/memory-training-game/web-build/static/js/app.6647fc0a.chunk.js.map",
+    "app.js": "/memory-training-game/web-build/static/js/app.7f741914.chunk.js",
+    "app.js.map": "/memory-training-game/web-build/static/js/app.7f741914.chunk.js.map",
     "runtime~app.js": "/memory-training-game/web-build/static/js/runtime~app.b4d090f1.js",
     "runtime~app.js.map": "/memory-training-game/web-build/static/js/runtime~app.b4d090f1.js.map",
-    "static/js/2.545fa443.chunk.js": "/memory-training-game/web-build/static/js/2.545fa443.chunk.js",
-    "static/js/2.545fa443.chunk.js.map": "/memory-training-game/web-build/static/js/2.545fa443.chunk.js.map",
+    "static/js/2.c3fe9ed8.chunk.js": "/memory-training-game/web-build/static/js/2.c3fe9ed8.chunk.js",
+    "static/js/2.c3fe9ed8.chunk.js.map": "/memory-training-game/web-build/static/js/2.c3fe9ed8.chunk.js.map",
     "favicon-16.png": "/memory-training-game/web-build/favicon-16.png",
     "favicon-32.png": "/memory-training-game/web-build/favicon-32.png",
     "favicon.ico": "/memory-training-game/web-build/favicon.ico",
     "index.html": "/memory-training-game/web-build/index.html",
     "manifest.json": "/memory-training-game/web-build/manifest.json",
     "serve.json": "/memory-training-game/web-build/serve.json",
-    "static/js/2.545fa443.chunk.js.LICENSE.txt": "/memory-training-game/web-build/static/js/2.545fa443.chunk.js.LICENSE.txt"
+    "static/js/2.c3fe9ed8.chunk.js.LICENSE.txt": "/memory-training-game/web-build/static/js/2.c3fe9ed8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.b4d090f1.js",
-    "static/js/2.545fa443.chunk.js",
-    "static/js/app.6647fc0a.chunk.js"
+    "static/js/2.c3fe9ed8.chunk.js",
+    "static/js/app.7f741914.chunk.js"
   ]
 }
