@@ -93,6 +93,120 @@ export default class App extends Component {
     this.init()
   }
 
+  levelsChoose = () => {
+    this.setState({
+      page: 'levels_choose'
+    })
+  }
+
+  levelsChooseBtns = (level = 0) => {
+    switch (level) {
+      case 0:
+          this.setState({
+            page: 'start',
+            timer: 0, //Значение прогресса
+            time_1: 2, //Время запоминания
+            time_2: 15, //Время выполнения
+            numbers: [], //Номера с ответами
+            answers: [], //Решения, изначально пустые
+            task: 0,
+            levels: 9, //количество уровней
+            variants_count: 12, //количество вариантов ответа
+            numbers_count: 4, //количество цифр  в одном ряде
+            min_random: 1, //минимальное значение сгенерируемого числа
+            max_random: 7, //максимальное значение сгенерируемого числа
+            variants: [], //Варианты ответов
+            seconds: 0,
+            currentAnswer: 0, //Текущий сфокусированный инпут ответа
+            result: [],
+            correct_count: 0 //Количество правильных ответов
+          }, ()=>{
+        
+            this.init()
+            this.taskStart();
+          })
+        break;
+
+      case 1:
+          this.setState({
+            page: 'start',
+            timer: 0, //Значение прогресса
+            time_1: 2, //Время запоминания
+            time_2: 15, //Время выполнения
+            numbers: [], //Номера с ответами
+            answers: [], //Решения, изначально пустые
+            task: 0,
+            levels: 9, //количество уровней
+            variants_count: 12, //количество вариантов ответа
+            numbers_count: 5, //количество цифр  в одном ряде
+            min_random: 1, //минимальное значение сгенерируемого числа
+            max_random: 7, //максимальное значение сгенерируемого числа
+            variants: [], //Варианты ответов
+            seconds: 0,
+            currentAnswer: 0, //Текущий сфокусированный инпут ответа
+            result: [],
+            correct_count: 0 //Количество правильных ответов
+          }, ()=>{
+        
+            this.init()
+            this.taskStart();
+          })
+        break; 
+
+      case 2:  
+          this.setState({
+            page: 'start',
+            timer: 0, //Значение прогресса
+            time_1: 2, //Время запоминания
+            time_2: 15, //Время выполнения
+            numbers: [], //Номера с ответами
+            answers: [], //Решения, изначально пустые
+            task: 0,
+            levels: 9, //количество уровней
+            variants_count: 12, //количество вариантов ответа
+            numbers_count: 6, //количество цифр  в одном ряде
+            min_random: 1, //минимальное значение сгенерируемого числа
+            max_random: 7, //максимальное значение сгенерируемого числа
+            variants: [], //Варианты ответов
+            seconds: 0,
+            currentAnswer: 0, //Текущий сфокусированный инпут ответа
+            result: [],
+            correct_count: 0 //Количество правильных ответов
+          }, ()=>{
+        
+            this.init()
+            this.taskStart();
+          })
+        break; 
+
+      case 3:  
+          this.setState({
+            page: 'start',
+            timer: 0, //Значение прогресса
+            time_1: 2, //Время запоминания
+            time_2: 15, //Время выполнения
+            numbers: [], //Номера с ответами
+            answers: [], //Решения, изначально пустые
+            task: 0,
+            levels: 9, //количество уровней
+            variants_count: 12, //количество вариантов ответа
+            numbers_count: 7, //количество цифр  в одном ряде
+            min_random: 1, //минимальное значение сгенерируемого числа
+            max_random: 7, //максимальное значение сгенерируемого числа
+            variants: [], //Варианты ответов
+            seconds: 0,
+            currentAnswer: 0, //Текущий сфокусированный инпут ответа
+            result: [],
+            correct_count: 0 //Количество правильных ответов
+          }, ()=>{
+        
+            this.init()
+            this.taskStart();
+          })
+        break; 
+    }
+  }
+
   init = () => {
     for (let i = 0; i < (this.state.levels + 1); i++) {
       let line = [], line_sum = [], step = 0, numbers = [], answers = [], result = [];
@@ -273,7 +387,13 @@ export default class App extends Component {
       if(!variants[variant_index]) {
         variants[variant_index] = l
       } else {
-        variants[this.getRandomIntInclusive(0,(this.state.variants_count-1))] = l
+        let found = false;
+        for (let index = 0; index <= this.state.variants_count-1; index++) {
+          if(!variants[index] && !found) {
+            found = true;
+            variants[index] = l
+          }
+        }
       }
     })
     for (let i = 0; i < this.state.variants_count; i++) {
@@ -312,15 +432,75 @@ export default class App extends Component {
       case "start":
         return (<Fragment>
                   <Text style={styles.title}>Memory training</Text>
-                  <Text style={styles.desc}>You will be given {this.state.numbers_count} numbers. Your task is to try to remember them in {this.state.time_1} seconds, then add the first with the second in your mind, and write down the resulting amount; add the second number with the third, write down the amount; etc. Thus, {this.state.numbers_count - 1} amounts should be received and recorded from you. The calculation and execution time is {this.state.time_2} seconds. Then proceed to the next row of numbers</Text>
+                  <Text style={styles.desc}>You will be given {this.state.numbers_count} numbers(example of the level 'Medium'). Your task is to try to remember them in {this.state.time_1} seconds, then add the first with the second in your mind, and write down the resulting amount; add the second number with the third, write down the amount; etc. Thus, {this.state.numbers_count - 1} amounts should be received and recorded from you. The calculation and execution time is {this.state.time_2} seconds. Then proceed to the next row of numbers</Text>
                   <TouchableHighlight
                     underlayColor="#5cd28e"
                     style={styles.button}
-                    onPress={() => this.taskStart()}
+                    onPress={() => this.levelsChoose()}
                   >
                     <Text style={styles.buttonText}>Start</Text>
                   </TouchableHighlight>
                 </Fragment>)
+
+      case "levels_choose":
+        return (<Fragment>
+            <Text style={styles.title}>Select difficulty level</Text>
+            <TouchableHighlight
+              underlayColor="#f1c40f"
+              style={[styles.button,{backgroundColor: '#f1c40f'}]}
+              onPress={() => {
+                this.levelsChooseBtns(0);
+              }}
+            >
+              <View style={styles.iconText}>
+                <Text style={styles.buttonText}>Easy 👶</Text>
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor="#f39c12"
+              style={[styles.button,{backgroundColor: '#f39c12'}]}
+              onPress={() => {
+                this.levelsChooseBtns(1);
+              }}
+            >
+              <View style={styles.iconText}>
+                <Text style={styles.buttonText}>Medium 😀</Text>
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor="#e67e22"
+              style={[styles.button,{backgroundColor: '#e67e22'}]}
+              onPress={() => {
+                this.levelsChooseBtns(2);
+              }}
+            >
+              <View style={styles.iconText}>
+                <Text style={styles.buttonText}>Hard 🔥</Text>
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor="#e74c3c"
+              style={[styles.button,{backgroundColor: '#e74c3c'}]}
+              onPress={() => {
+                this.levelsChooseBtns(3);
+              }}
+            >
+              <View style={styles.iconText}>
+                <Text style={styles.buttonText}>Very hard 🤬🔥</Text>
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight
+                underlayColor="#ecf0f1"
+                style={styles.buttonShare}
+                onPress={() => {
+                  this.setState({
+                    page: 'start'
+                  })
+                }}
+              >
+                <Text style={styles.buttonTextShare}>Back</Text>
+            </TouchableHighlight>
+          </Fragment>)
       
       case "task":
         return (<Fragment>
@@ -454,6 +634,11 @@ const styles = StyleSheet.create({
     height: Platform.OS == 'android' ? 4 : 2,
     zIndex: 1000,
   },
+  iconText: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   title: {
     fontSize: normalize(28),
     textAlign: 'center',
@@ -481,6 +666,20 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     width: '50%',
     margin: 15
+  },
+  buttonShare: {
+    backgroundColor: '#ecf0f1',
+    borderRadius: 30,
+    width: '50%',
+    margin: 15,
+    marginBottom: 0
+  },
+  buttonTextShare: {
+    fontSize: normalize(16),
+    fontWeight: '500',
+    textAlign: 'center',
+    padding: 15,
+    color: '#34495e'
   },
   buttonNext: {
     backgroundColor: '#bdc3c7',
