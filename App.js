@@ -6,7 +6,7 @@ import Slider from '@react-native-community/slider';
 const pixelRatio = PixelRatio.get();
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
-
+//
 const normalize = (size) => {
   if (pixelRatio === 2) {
     // iphone 5s and older Androids
